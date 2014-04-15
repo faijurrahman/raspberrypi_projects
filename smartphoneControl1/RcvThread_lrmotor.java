@@ -20,11 +20,11 @@ public class RcvThread implements Runnable{
 
     final GpioController gpio = GpioFactory.getInstance();
 
-    final GpioPinDigitalOutput pinlfwd = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_04, "lfwd", PinState.LOW);
-    final GpioPinDigitalOutput pinlrev = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_17, "lrev", PinState.LOW);
+    final GpioPinDigitalOutput pinlfwd = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, "lfwd", PinState.LOW);
+    final GpioPinDigitalOutput pinlrev = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_07, "lrev", PinState.LOW);
 
-    final GpioPinDigitalOutput pinrfwd = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_27, "rfwd", PinState.LOW);
-    final GpioPinDigitalOutput pinrrev = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_22, "rrev", PinState.LOW);    
+    final GpioPinDigitalOutput pinrfwd = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_03, "rfwd", PinState.LOW);
+    final GpioPinDigitalOutput pinrrev = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_02, "rrev", PinState.LOW);    
 
     public RcvThread(Socket clntSock, SocketAddress clientAddress, Logger logger) {
         this.clientSock = clntSock;
